@@ -1,0 +1,15 @@
+.wrap {
+  @apply flex flex-col gap-8;
+
+  > h1:nth-child(1) {
+    @apply text-[26px] font-bold;
+  }
+
+  > p:last-child {
+    @apply text-lg text-brightGray;
+
+    > a {
+      @apply text-blue-400 underline;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.wrap {
+  @apply flex flex-col gap-8;
+
+  > h1 {
+    @apply text-[32px];
+  }
+
+  > ul {
+    @apply relative flex flex-col gap-2;
+
+    > li:nth-child(1) {
+      @apply rounded-t-lg;
+    }
+
+    > li:last-child {
+      @apply rounded-b-lg;
+    }
+
+    > li {
+      @apply p-4 bg-[#282828] text-white text-base;
+    }
+
+    > img {
+      @apply absolute bottom-0 left-0 rotate-45;
+    }
+  }
+}

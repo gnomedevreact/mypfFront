@@ -1,0 +1,23 @@
+.wrap {
+  @apply grid grid-cols-1 gap-8 lg:grid-cols-2;
+
+  > a {
+    @apply flex flex-col gap-4 items-start cursor-pointer;
+
+    > div:nth-child(1) {
+      @apply rounded-xl overflow-hidden min-h-[170px];
+
+      > img {
+        @apply transition-transform duration-700 h-full object-cover lg:h-[330px] lg:w-[500px];
+      }
+
+      &:hover img {
+        @apply scale-125;
+      }
+    }
+
+    > p {
+      @apply text-base font-medium;
+    }
+  }
+}

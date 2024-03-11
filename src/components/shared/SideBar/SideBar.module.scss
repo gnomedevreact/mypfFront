@@ -1,0 +1,33 @@
+.sidebar {
+  @apply hidden;
+
+  > div:nth-child(1) {
+    @apply flex items-start gap-3 pb-8 border-b border-lightGray;
+
+    > div:nth-child(1) {
+      @apply w-[52px] h-[52px] rounded-xl overflow-hidden border-2 border-white;
+    }
+  }
+
+  > ul {
+    @apply flex flex-col gap-5;
+
+    > a {
+      @apply flex items-center gap-4 px-4 py-4 rounded-xl cursor-pointer transition-all;
+
+      > svg {
+        @apply size-5;
+      }
+
+      &:active {
+        @apply bg-lightGray;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .sidebar {
+    @apply flex flex-col gap-8 pl-2 pr-4 py-10;
+  }
+}

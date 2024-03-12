@@ -2,7 +2,7 @@ import { Home } from "@/components/screens/Home/Home";
 import { IProject } from "@/types/project.interface";
 
 async function getProjects() {
-  const res = await fetch(`http://localhost:7000/api/work/get-all`, {
+  const res = await fetch(`https://mypfback.onrender.com/api/work/get-all`, {
     next: {
       revalidate: 3600,
     },

@@ -25,7 +25,6 @@ export const Tools = () => {
           <li>PostgreSQL</li>
           <li>MongoDB</li>
           <li>SAAS</li>
-          <Image src={error} alt="erorrs" />
         </ul>
       </Container>
     </Section>

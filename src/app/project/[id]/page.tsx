@@ -4,11 +4,14 @@ import { IProject } from "@/types/project.interface";
 export const revalidate = 3600;
 
 export async function generateStaticParams() {
-  const res = await fetch(`https://mypfback.onrender.com/api/work/get-all`, {
-    next: {
-      revalidate: 3600,
-    },
-  });
+  const res = await fetch(
+    `https://mypfback-nsuw.onrender.com/api/work/get-all`,
+    {
+      next: {
+        revalidate: 3600,
+      },
+    }
+  );
 
   const projects: IProject[] = await res.json();
   const projectIds = projects.map((project) => project.id);
@@ -21,7 +24,9 @@ export async function generateStaticParams() {
 }
 
 async function getWork(id: string) {
-  const res = await fetch(`https://mypfback.onrender.com/api/work/by-id/${id}`);
+  const res = await fetch(
+    `https://mypfback-nsuw.onrender.com/api/work/by-id/${id}`
+  );
   const work: IProject = await res.json();
 
   return work;

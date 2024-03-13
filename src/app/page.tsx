@@ -2,11 +2,14 @@ import { Home } from "@/components/screens/Home/Home";
 import { IProject } from "@/types/project.interface";
 
 async function getProjects() {
-  const res = await fetch(`https://mypfback.onrender.com/api/work/get-all`, {
-    next: {
-      revalidate: 3600,
-    },
-  });
+  const res = await fetch(
+    `https://mypfback-nsuw.onrender.com/api/work/get-all`,
+    {
+      next: {
+        revalidate: 3600,
+      },
+    }
+  );
   const projects: IProject[] = await res.json();
 
   return projects;

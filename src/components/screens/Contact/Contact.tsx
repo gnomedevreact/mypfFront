@@ -6,7 +6,7 @@ import { toast } from "sonner";
 
 import { Button } from "@/components/shared/Button/Button";
 import { Container } from "@/components/shared/Container/Container";
-import { Section } from "@/components/shared/Section/Section";
+import { AnimatedSection } from "@/components/shared/Section/Section";
 import { Text } from "@/components/shared/Text/Text";
 
 import styles from "./Contact.module.scss";
@@ -29,7 +29,7 @@ export const Contact = () => {
 
   return (
     <main className={styles.main}>
-      <Section>
+      <AnimatedSection>
         <Container className={styles.wrap}>
           <div>
             <Text title>Contacts</Text>
@@ -48,7 +48,7 @@ export const Contact = () => {
             Copy email
           </Button>
         </Container>
-      </Section>
+      </AnimatedSection>
       <input
         type="text"
         defaultValue={"mironbrinkovskiy@gmail.com"}

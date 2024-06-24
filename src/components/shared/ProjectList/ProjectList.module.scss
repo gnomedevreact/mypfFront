@@ -1,8 +1,15 @@
 .wrap {
   @apply grid grid-cols-1 gap-8 lg:grid-cols-2;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
 
   > a {
     @apply flex flex-col gap-4 items-start cursor-pointer;
+    transition: 0.5s;
+
+    &:hover {
+      transform: translateZ(60px) rotateY(-5deg);
+    }
 
     > div:nth-child(1) {
       @apply rounded-xl overflow-hidden min-h-[170px];

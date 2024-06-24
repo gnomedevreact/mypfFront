@@ -8,6 +8,9 @@
   > ul {
     @apply relative flex flex-col gap-2;
 
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+
     > li:nth-child(1) {
       @apply rounded-t-lg;
     }
@@ -18,6 +21,24 @@
 
     > li {
       @apply p-4 bg-[#282828] text-white text-base;
+      transition: 0.5s;
+
+      &:hover {
+        transform: translateZ(10px);
+      }
+      &:hover + * {
+        transform: translateZ(10px) rotateX(-10deg);
+      }
+      &:hover + * + * {
+        transform: translateZ(10px) rotateX(-5deg);
+      }
+
+      &:has(+ *:hover) {
+        transform: translateZ(10px) rotateX(10deg);
+      }
+      &:has(+ *:hover) {
+        transform: translateZ(10px) rotateX(5deg);
+      }
     }
 
     > img {

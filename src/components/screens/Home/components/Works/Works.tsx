@@ -14,7 +14,7 @@ interface IWorks {
 
 export const Works = ({ projects }: IWorks) => {
   return (
-    <AnimatedSection>
+    <AnimatedSection opacity={0.5}>
       <Container className={styles.wrap}>
         <Text title>Work examples 💼</Text>
         <ProjectList projects={projects} />

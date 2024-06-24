@@ -1,12 +1,12 @@
 import { Container } from "@/components/shared/Container/Container";
-import { Section } from "@/components/shared/Section/Section";
+import { AnimatedSection } from "@/components/shared/Section/Section";
 import { Text } from "@/components/shared/Text/Text";
 
 import styles from "./Intro.module.scss";
 
 export const Intro = () => {
   return (
-    <Section>
+    <AnimatedSection>
       <Container className={styles.wrap}>
         <Text title className={"leading-8"}>
           Miron Brinkovskii
@@ -26,6 +26,6 @@ export const Intro = () => {
           let's create digital masterpieces that leave a lasting impact.
         </Text>
       </Container>
-    </Section>
+    </AnimatedSection>
   );
 };

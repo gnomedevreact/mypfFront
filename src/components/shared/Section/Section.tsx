@@ -8,6 +8,7 @@ import styles from "./Section.module.scss";
 interface ISection {
   children: React.ReactNode;
   className?: string;
+  opacity?: number;
 }
 
 export const Section = ({ children, className }: ISection) => {
@@ -16,12 +17,12 @@ export const Section = ({ children, className }: ISection) => {
   );
 };
 
-export const AnimatedSection = ({ children, className }: ISection) => {
+export const AnimatedSection = ({ children, className, opacity }: ISection) => {
   return (
     <AnimatePresence>
       <motion.section
         className={tw(styles.section, className)}
-        initial={{ opacity: 0, y: 15 }}
+        initial={{ opacity: opacity || 0, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 15 }}
         transition={{ duration: 0.6, ease: [0.17, 0.67, 0.83, 0.91] }}

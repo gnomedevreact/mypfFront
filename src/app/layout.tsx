@@ -6,6 +6,7 @@ import { Toaster } from "sonner";
 
 import { Header } from "@/components/shared/Header/Header";
 import { SideBar } from "@/components/shared/SideBar/SideBar";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
         <SideBar />
         {children}
       </body>
+      <Analytics />
     </html>
   );
 }

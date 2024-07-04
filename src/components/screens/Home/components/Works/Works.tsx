@@ -20,14 +20,18 @@ export const Works = ({ projects }: IWorks) => {
         <ProjectList projects={projects} />
         <Text>
           You can check all my works on{" "}
+          <Link target="_blank" href={"https://kwork.ru/user/mironbrinkovskiy"}>
+            Kwork
+          </Link>{" "}
+          or{" "}
           <Link
+            target="_blank"
             href={
               "https://www.upwork.com/freelancers/~0116aad6ace738303c?viewMode=1"
             }
           >
-            Kwork
-          </Link>{" "}
-          or <Link href={"https://kwork.ru/user/mironbrinkovskiy"}>UpWork</Link>
+            UpWork
+          </Link>
         </Text>
       </Container>
     </AnimatedSection>

@@ -19,7 +19,7 @@ html {
   @apply h-full;
 }
 body {
-  @apply p-2 bg-blackMain lg:flex;
+  @apply p-2 bg-blackMain overflow-x-clip lg:flex;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }

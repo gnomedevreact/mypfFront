@@ -1,11 +1,11 @@
 .wrap {
-  @apply flex flex-col gap-8;
+  @apply relative flex flex-col gap-8;
+}
 
-  > h1 {
-    @apply text-[32px];
-  }
+.title {
+  @apply text-[32px] leading-8;
+}
 
-  > p {
-    @apply text-lg text-brightGray;
-  }
+.text {
+  @apply text-lg text-brightGray;
 }

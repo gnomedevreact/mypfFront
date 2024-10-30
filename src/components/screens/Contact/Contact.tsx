@@ -1,15 +1,16 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { useRef } from "react";
-import { toast } from "sonner";
+import Link from 'next/link';
+import { useRef } from 'react';
+import { toast } from 'sonner';
 
-import { Button } from "@/components/shared/Button/Button";
-import { Container } from "@/components/shared/Container/Container";
-import { AnimatedSection } from "@/components/shared/Section/Section";
-import { Text } from "@/components/shared/Text/Text";
+import { Button } from '@/components/shared/Button/Button';
+import { Container } from '@/components/shared/Container/Container';
+import { AnimatedSection } from '@/components/shared/Section/Section';
+import { Text } from '@/components/shared/Text/Text';
 
-import styles from "./Contact.module.scss";
+import styles from './Contact.module.scss';
+import { Spotlight } from '@/components/ui/spotlight';
 
 export const Contact = () => {
   const ref = useRef<HTMLInputElement>(null);
@@ -24,19 +25,20 @@ export const Contact = () => {
 
     navigator.clipboard.writeText(copyText.value);
 
-    toast.success("Email was copied");
+    toast.success('Email was copied');
   };
 
   return (
     <main className={styles.main}>
       <AnimatedSection>
         <Container className={styles.wrap}>
+          <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
           <div>
             <Text title>Contacts</Text>
             <Text>My contact information</Text>
           </div>
           <div>
-            <Link href={"mailto:mironbrinkovskiy@gmail.com"}>
+            <Link href={'mailto:mironbrinkovskiy@gmail.com'}>
               mironbrinkovskiy@gmail.com
             </Link>
             <Text>E-mail</Text>
@@ -51,9 +53,9 @@ export const Contact = () => {
       </AnimatedSection>
       <input
         type="text"
-        defaultValue={"mironbrinkovskiy@gmail.com"}
+        defaultValue={'mironbrinkovskiy@gmail.com'}
         ref={ref}
-        className={"hidden"}
+        className={'hidden'}
       />
     </main>
   );

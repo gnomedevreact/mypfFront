@@ -3,7 +3,7 @@
 }
 
 .wrap {
-  > div:nth-child(1) {
+  > div:nth-child(2) {
     @apply flex flex-col gap-2 pb-10 border-b border-brightGray;
 
     > h1 {
@@ -15,7 +15,7 @@
     }
   }
 
-  > div:nth-child(2) {
+  > div:nth-child(3) {
     @apply flex flex-col gap-1 pt-10;
 
     > a {
